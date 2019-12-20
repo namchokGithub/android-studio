@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+        tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home"
+            android:title="@string/textHome"
+            android:icon="@drawable/ic_action_home"
+            />
+        <item
+            android:id="@+id/work"
+            android:title="@string/textWork"
+            android:icon="@drawable/ic_action_work"
+            />
+
+        <item android:title="Control">
+
+            <menu>
+                <item
+                    android:id="@+id/setting"
+                    android:title="@string/textSetting"
+                    android:icon="@drawable/ic_action_setting"
+                    />
+                <item
+                    android:id="@+id/logout"
+                    android:title="@string/textLogout"
+                    android:icon="@drawable/ic_action_logout"
+                    />
+            </menu>
+
+        </item>
+    </group>
+</menu>

@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Mhee</string>
+    <string name="textTitleApp">Namchok ^^</string>
+    <string name="textHw01">Home work 01</string>
+    <string name="textHw02">Home work 02</string>
+    <string name="textHw03">Home work 03</string>
+    <string name="textHw04">Home work 04</string>
+    <string name="btnNextPage">Next page</string>
+    <string name="textTitleHw02">Homework 02</string>
+
+    <!--  Login  -->
+    <string name="textLogin">Login</string>
+    <string name="textGo">GO</string>
+    <string name="textUsername">Username</string>
+    <string name="textPassword">Password</string>
+
+    <string name="btnLogout">Logout</string>
+    <string name="textA1">A1</string>
+    <string name="textA2">A2</string>
+    <string name="textA4">A4</string>
+    <string name="textA3">A3</string>
+    <string name="textRela1">Relative Layout Sample:</string>
+    <string name="textRela2">Touch to listen to animal sound.</string>
+
+    <!--  Description image  -->
+    <string name="textDesLogo">Logo</string>
+    <string name="DesChicken">Chicken</string>
+    <string name="DesTiger">Tiger</string>
+    <string name="DesFog">Fog</string>
+    <string name="DesFlog">Flog</string>
+    <string name="DesKoala">Koala</string>
+    <string name="DesBear">Bear</string>
+    <string name="DesPanda">Panda</string>
+    <string name="DesPig">Pig</string>
+    <string name="DesMonkey">Monkey</string>
+    <string name="textUsernameShow">TextView</string>
+    <string name="textHi">Hey!  </string>
+    <string name="textMypassword">Your password</string>
+
+    <!-- Menu -->
+    <string name="textHome">Home</string>
+    <string name="textWork">Work</string>
+    <string name="textSetting">Setting</string>
+    <string name="textLogout">Logout</string>
+    <string name="textOpen">open</string>
+    <string name="textClose">close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
