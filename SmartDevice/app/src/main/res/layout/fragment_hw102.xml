@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fragment_hw102"
     tools:context=".Hw102Fragment">
 
     <LinearLayout
@@ -77,7 +81,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/backHw01"
+                android:id="@+id/backHw1011"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="94dp"
@@ -85,20 +89,24 @@
                 android:text="@string/textHw01"
                 android:background="@drawable/btn_hw1"
                 android:textColor="@color/whiteColor"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="OnClick"/>
 
             <Button
-                android:id="@+id/nextHw03"
+                android:id="@+id/nextHw1031"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/textHw03"
                 android:background="@drawable/btn_hw1"
                 android:textColor="@color/whiteColor"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="OnClick"/>
 
         </LinearLayout>
 
     </LinearLayout>
 
 </FrameLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

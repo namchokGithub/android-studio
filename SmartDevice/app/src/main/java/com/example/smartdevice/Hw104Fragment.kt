@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.FragmentTransaction
 
 /**
@@ -19,11 +20,13 @@ class Hw104Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val v = inflater.inflate(R.layout.fragment_work, container, false)
+        val v = inflater.inflate(R.layout.fragment_hw104, container, false)
 
-        btnHw03 = v.findViewById(R.id.backHw03)
+        btnHw03 = v.findViewById(R.id.backHw1031)
         btnHw03.setOnClickListener {
             hw03()
+            val myToast = Toast.makeText(activity, "Test", Toast.LENGTH_SHORT)
+            myToast.show()
         }
 
         return inflater.inflate(R.layout.fragment_hw104, container, false)
@@ -33,7 +36,7 @@ class Hw104Fragment : Fragment() {
         val fragment = Hw103Fragment()
         val fragmentManager = activity!!.supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout, fragment)
+        fragmentTransaction.replace(R.id.fragment_hw101, fragment)
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
         fragmentTransaction.commit()
     }

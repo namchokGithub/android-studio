@@ -20,10 +20,14 @@ class Hw101Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        val v = inflater.inflate(R.layout.fragment_work, container, false)
 
-        btnHw02 = v.findViewById(R.id.nextHw02)
+        if(container == null){
+            return null
+        }
+        // Inflate the layout for this fragment
+        val v = inflater.inflate(R.layout.fragment_hw101, container, false)
+
+        btnHw02 = v.findViewById(R.id.nextHw1021)
         btnHw02.setOnClickListener {
             hw02()
         }
@@ -35,7 +39,7 @@ class Hw101Fragment : Fragment() {
         val fragment = Hw102Fragment()
         val fragmentManager = activity!!.supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout, fragment)
+        fragmentTransaction.replace(R.id.fragment_hw101, fragment)
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
         fragmentTransaction.commit()
     }

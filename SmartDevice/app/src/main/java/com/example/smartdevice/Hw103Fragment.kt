@@ -21,14 +21,14 @@ class Hw103Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val v = inflater.inflate(R.layout.fragment_work, container, false)
+        val v = inflater.inflate(R.layout.fragment_hw103, container, false)
 
-        btnHw02 = v.findViewById(R.id.backHw02)
+        btnHw02 = v.findViewById(R.id.backHw1021)
         btnHw02.setOnClickListener {
             hw02()
         }
 
-        btnHw04 = v.findViewById(R.id.nextHw04)
+        btnHw04 = v.findViewById(R.id.nextHw1041)
         btnHw04.setOnClickListener {
             hw04()
         }
@@ -40,7 +40,7 @@ class Hw103Fragment : Fragment() {
         val fragment = Hw104Fragment()
         val fragmentManager = activity!!.supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout, fragment)
+        fragmentTransaction.replace(R.id.fragment_hw101, fragment)
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
         fragmentTransaction.commit()
     }
@@ -48,7 +48,7 @@ class Hw103Fragment : Fragment() {
         val fragment = Hw102Fragment()
         val fragmentManager = activity!!.supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout, fragment)
+        fragmentTransaction.replace(R.id.fragment_hw101, fragment)
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
         fragmentTransaction.commit()
     }
