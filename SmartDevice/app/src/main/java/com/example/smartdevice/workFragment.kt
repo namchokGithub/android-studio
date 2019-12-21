@@ -26,7 +26,7 @@ class workFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val v = inflater.inflate(R.layout.fragment_work, container, false)
-        btnHw02 = v.findViewById(R.id.nextHw02)
+        btnHw02 = v.findViewById(R.id.menuHw101)
 
         btnHw02.setOnClickListener {
             hw02()
