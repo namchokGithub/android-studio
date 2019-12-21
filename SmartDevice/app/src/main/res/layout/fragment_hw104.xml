@@ -5,10 +5,174 @@
     android:layout_height="match_parent"
     tools:context=".Hw104Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@drawable/bg"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textTitleApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/textTitleApp"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/textTitleHw02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/textHw04"
+            android:textSize="24sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.krootoom.mygraphicactivity.AnimalActivity">
+
+            <TextView
+                android:id="@+id/txtLayoutTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="18sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/textRela1"/>
+
+            <TextView
+                android:id="@+id/txtAnimalTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtLayoutTitle"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:layout_marginStart="10dp"
+                android:text="@string/textRela2"/>
+
+
+            <!--  R1 -->
+            <ImageView
+                android:id="@+id/chicken"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/txtAnimalTitle"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/chicken"
+                android:contentDescription="@string/DesChicken" />
+
+            <ImageView
+                android:id="@+id/fog"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignTop="@+id/chicken"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@+id/chicken"
+                android:src="@drawable/fog"
+                android:contentDescription="@string/DesFog" />
+
+            <ImageView
+                android:id="@+id/tiger"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignTop="@+id/chicken"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="-1dp"
+                android:layout_toEndOf="@+id/fog"
+                android:src="@drawable/tiger"
+                android:contentDescription="@string/DesTiger"/>
+
+            <!--  R2 -->
+            <ImageView
+                android:id="@+id/koala"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/chicken"
+                android:layout_alignStart="@+id/chicken"
+                android:src="@drawable/koala"
+                android:contentDescription="@string/DesKoala"/>
+
+            <ImageView
+                android:id="@+id/bear"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignTop="@+id/koala"
+                android:layout_toEndOf="@+id/koala"
+                android:layout_alignStart="@+id/fog"
+                android:src="@drawable/bear"
+                android:contentDescription="@string/DesBear"/>
+
+            <ImageView
+                android:id="@+id/flog"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignTop="@+id/koala"
+                android:layout_toEndOf="@+id/bear"
+                android:layout_alignStart="@+id/tiger"
+                android:src="@drawable/flog"
+                android:contentDescription="@string/DesFlog"/>
+
+            <!--  R3 -->
+            <ImageView
+                android:id="@+id/monkey"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/koala"
+                android:layout_marginTop="10dp"
+                android:layout_alignStart="@+id/chicken"
+                android:src="@drawable/monkey"
+                android:contentDescription="@string/DesMonkey"/>
+
+            <ImageView
+                android:id="@+id/pig"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/pig"
+                android:layout_alignTop="@+id/monkey"
+                android:layout_alignStart="@+id/fog"
+                android:contentDescription="@string/DesPig"/>
+
+            <ImageView
+                android:id="@+id/panda"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignTop="@id/monkey"
+                android:layout_alignStart="@id/tiger"
+                android:src="@drawable/panda"
+                android:contentDescription="@string/DesPanda"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_below="@+id/monkey"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/backHw03"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textHw03"
+                    android:background="@drawable/btn_hw1"
+                    android:textColor="@color/whiteColor"
+                    android:textStyle="bold"
+                    android:layout_marginStart="230dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
 
 </FrameLayout>
