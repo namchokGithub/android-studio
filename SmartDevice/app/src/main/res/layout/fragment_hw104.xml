@@ -162,11 +162,11 @@
                     android:id="@+id/backHw03"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="240dp"
                     android:text="@string/textHw03"
                     android:background="@drawable/btn_hw1"
                     android:textColor="@color/whiteColor"
-                    android:textStyle="bold"
-                    android:layout_marginStart="230dp" />
+                    android:textStyle="bold"  />
 
             </LinearLayout>
 

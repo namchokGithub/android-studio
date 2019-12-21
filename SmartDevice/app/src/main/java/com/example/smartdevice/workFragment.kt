@@ -18,7 +18,6 @@ class workFragment : Fragment() {
     private lateinit var btnHw02 : Button
     private lateinit var btnHw03 : Button
     private lateinit var btnHw04 : Button
-    private lateinit var btnHw05 : Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,7 +27,7 @@ class workFragment : Fragment() {
         val v = inflater.inflate(R.layout.fragment_work, container, false)
 
         btnHw01 = v.findViewById(R.id.menuHw101)
-        btnHw02.setOnClickListener {
+        btnHw01.setOnClickListener {
             hw01()
         }
 
@@ -61,7 +60,7 @@ class workFragment : Fragment() {
         fragmentTransaction.commit()
     }
     fun hw02() {
-        val fragment = Hw101Fragment()
+        val fragment = Hw102Fragment()
         val fragmentManager = activity!!.supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame_layout, fragment)
@@ -69,7 +68,7 @@ class workFragment : Fragment() {
         fragmentTransaction.commit()
     }
     fun hw03() {
-        val fragment = Hw101Fragment()
+        val fragment = Hw103Fragment()
         val fragmentManager = activity!!.supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame_layout, fragment)
@@ -77,21 +76,14 @@ class workFragment : Fragment() {
         fragmentTransaction.commit()
     }
     fun hw04() {
-        val fragment = Hw101Fragment()
+        val fragment = Hw104Fragment()
         val fragmentManager = activity!!.supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame_layout, fragment)
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
         fragmentTransaction.commit()
     }
-    fun hw05() {
-        val fragment = Hw101Fragment()
-        val fragmentManager = activity!!.supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout, fragment)
-        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-        fragmentTransaction.commit()
-    }
+
 
 
 }

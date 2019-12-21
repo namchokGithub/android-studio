@@ -14,7 +14,7 @@ import androidx.fragment.app.FragmentTransaction
  */
 class Hw101Fragment : Fragment() {
 
-    private lateinit var btnHw03 : Button
+    private lateinit var btnHw02 : Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,16 +23,16 @@ class Hw101Fragment : Fragment() {
         // Inflate the layout for this fragment
         val v = inflater.inflate(R.layout.fragment_work, container, false)
 
-        btnHw03 = v.findViewById(R.id.nextHw03)
-        btnHw03.setOnClickListener {
-            hw03()
+        btnHw02 = v.findViewById(R.id.nextHw02)
+        btnHw02.setOnClickListener {
+            hw02()
         }
 
         return v
     }
 
-    fun hw03(){
-        val fragment = Hw101Fragment()
+    fun hw02(){
+        val fragment = Hw102Fragment()
         val fragmentManager = activity!!.supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame_layout, fragment)
