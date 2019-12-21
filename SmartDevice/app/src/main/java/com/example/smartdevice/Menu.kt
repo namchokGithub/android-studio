@@ -9,7 +9,7 @@ import androidx.core.view.GravityCompat
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_menu.*
-import kotlinx.android.synthetic.main.app_bar_name.*
+import kotlinx.android.synthetic.main.app_bar_main.*
 
 class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -25,7 +25,7 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         setSupportActionBar(toolBar)
         val actionBar = supportActionBar
         if (actionBar != null) {
-            actionBar.title = "Navigation Drawer"
+            actionBar.title = "Namchok <3"
         }
 
         val open : Int = R.string.textOpen
