@@ -16,7 +16,7 @@
             android:icon="@drawable/ic_action_work"
             />
 
-        <item android:title="Control">
+        <item android:title="@string/textControl">
 
             <menu>
                 <item

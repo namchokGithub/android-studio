@@ -53,7 +53,7 @@ class Home : AppCompatActivity() {
     }
 
     public fun go(view: View) {
-        val intent = Intent(this, Homework01::class.java)
+        val intent = Intent(this, Menu::class.java)
         startActivity(intent)
     }
 }
