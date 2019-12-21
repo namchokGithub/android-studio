@@ -3,7 +3,6 @@ package com.example.smartdevice
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.FragmentTransaction
@@ -58,7 +57,6 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
     override fun onNavigationItemSelected(menuItem: MenuItem): Boolean {
         when(menuItem.itemId){
             R.id.homepage -> {
-                Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT).show()
                 homeFragment = homeFragment()
                 supportFragmentManager
                     .beginTransaction()
