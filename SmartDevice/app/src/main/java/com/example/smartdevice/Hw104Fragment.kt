@@ -29,7 +29,7 @@ class Hw104Fragment : Fragment() {
             myToast.show()
         }
 
-        return inflater.inflate(R.layout.fragment_hw104, container, false)
+        return v
     }
 
     fun hw03() {

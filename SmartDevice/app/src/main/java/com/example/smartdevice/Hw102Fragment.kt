@@ -34,7 +34,7 @@ class Hw102Fragment : Fragment() {
             hw03()
         }
 
-        return inflater.inflate(R.layout.fragment_hw102, container, false)
+        return v
     }
 
     fun hw01() {
