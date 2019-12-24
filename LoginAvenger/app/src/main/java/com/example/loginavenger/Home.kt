@@ -2,6 +2,7 @@ package com.example.loginavenger
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_home.*
 
 
 class Home : AppCompatActivity() {
@@ -12,7 +13,10 @@ class Home : AppCompatActivity() {
 
         try {
             this.supportActionBar!!.hide()
-        } catch (e: NullPointerException) {
-        }
+        } catch (e: NullPointerException) {}
+
+        text1!!.text = this.intent.extras!!.getString("username")
+        text2!!.text = this.intent.extras!!.getString("password")
+
     }
 }
