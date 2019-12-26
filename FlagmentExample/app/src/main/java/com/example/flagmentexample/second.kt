@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.FragmentTransaction
 
@@ -15,6 +16,12 @@ class second : Fragment() {
 
         super.onCreate(savedInstanceState)
         val view = inflater.inflate(R.layout.fragment_second, container, false)
+
+        val bundle = arguments
+        if (bundle != null) {
+            msg = bundle.getString("msg").toString()
+
+        }
 
         val button : Button = view.findViewById(R.id.btnNextPage);
 
@@ -31,8 +38,23 @@ class second : Fragment() {
 
         }
 
+        val text : TextView = view.findViewById(R.id.text)
+        text.setText(msg)
+
         return view
 
+    }
+
+    private var msg : String = ""
+
+    fun newInstance(message: String): second {
+
+        val fragment = second()
+        val bundle = Bundle()
+        bundle.putString("msg", message)
+        fragment.setArguments(bundle)
+
+        return fragment
     }
 
 }

@@ -25,9 +25,10 @@ class first : Fragment() {
 
         button.setOnClickListener {
 
+
             Toast.makeText(context,"Change to fragment 2 Success", Toast.LENGTH_LONG).show()
 
-            val fragment_second =second()
+            val fragment_second = second().newInstance("Namchok")
             val fm = fragmentManager
             val transaction : FragmentTransaction = fm!!.beginTransaction()
             transaction.replace(R.id.contentContainer, fragment_second,"fragment_second")
