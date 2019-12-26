@@ -19,7 +19,7 @@ class third : Fragment() {
             false
         )
 
-        val button : Button = view.findViewById(R.id.btnNextPage1);
+        val button : Button = view.findViewById(R.id.btnNextPage);
 
         button.setOnClickListener {
 

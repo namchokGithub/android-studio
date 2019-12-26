@@ -20,4 +20,19 @@ class MainActivity : AppCompatActivity() {
         val fragment_fourth = fourth()
         supportFragmentManager.beginTransaction().replace(R.id.contentContainerBelow, fragment_fourth, "fragment_fourth").addToBackStack("fragment_fourth").commit()
     }
+
+    override fun onBackPressed() {
+
+        val manager = supportFragmentManager.findFragmentById(R.id.contentContainer)
+
+        if (manager is third ) {
+
+            finish()
+
+        }
+        else{
+            super.onBackPressed();
+        }
+
+    }
 }

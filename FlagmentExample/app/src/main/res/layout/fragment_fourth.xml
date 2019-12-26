@@ -7,5 +7,18 @@
     android:background="#F4FF81"
     android:id="@+id/fragment_fourth">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:text="Fourth Fragment" />
+
+    <Button
+        android:id="@+id/btnNextPageF2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Next Page" />
 
 </FrameLayout>

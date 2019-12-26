@@ -21,7 +21,7 @@ class first : Fragment() {
         // Inflate the layout for this fragment
         val view : View = inflater.inflate(R.layout.fragment_first, container, false)
 
-        val button : Button = view.findViewById(R.id.btnNextPage2);
+        val button : Button = view.findViewById(R.id.btnNextPage);
 
         button.setOnClickListener {
 

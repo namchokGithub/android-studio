@@ -16,7 +16,7 @@ class second : Fragment() {
         super.onCreate(savedInstanceState)
         val view = inflater.inflate(R.layout.fragment_second, container, false)
 
-        val button : Button = view.findViewById(R.id.btnNextPage3);
+        val button : Button = view.findViewById(R.id.btnNextPage);
 
         button.setOnClickListener {
 
