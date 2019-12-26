@@ -52,7 +52,8 @@
             android:layout_marginStart="20dp"
             android:textColor="#EC0756"
             android:layout_alignStart="@+id/textHi"
-            android:textSize="50sp" />
+            android:textSize="50sp"
+            tools:ignore="NotSibling" />
 
         <TextView
             android:id="@+id/textPassword"
