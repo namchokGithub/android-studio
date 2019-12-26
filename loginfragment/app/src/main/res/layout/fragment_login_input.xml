@@ -6,38 +6,60 @@
     android:id="@+id/fnLogininput"
     tools:context=".loginInput">
 
+ <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="UselessParent">
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/inputUsername"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/username"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="30dp"
+        android:background="@drawable/input_radius"
+        android:autofillHints=""
+        android:textColor="@color/colorInput"
+        tools:ignore="RtlSymmetry"
+        tools:targetApi="o" />
 
-        <EditText
-            android:id="@+id/inputUsername"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="@string/username"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="10dp"
-            android:paddingLeft="5dp"
-            android:background="@drawable/input_radius"
-            android:autofillHints="" />
+    <EditText
+        android:id="@+id/inputPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:paddingStart="30dp"
+        android:background="@drawable/input_radius"
+        android:textColor="@color/colorInput"
+        android:autofillHints=""
+        tools:ignore="RtlSymmetry"
+        tools:targetApi="o" />
 
-        <EditText
-            android:id="@+id/inputPassword"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:ems="10"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="20dp"
-            android:paddingStart="5dp"
-            android:background="@drawable/input_radius"
-            android:autofillHints="" />
-    </LinearLayout>
+     <Button
+         android:id="@+id/button"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="300dp"
+         android:layout_marginEnd="30dp"
+         android:layout_marginTop="10dp"
+         android:text="@string/login"
+         android:textColor="#ffff"
+         android:background="@drawable/bg_login"
+         />
+
+
+ </LinearLayout>
+
+
 </FrameLayout>

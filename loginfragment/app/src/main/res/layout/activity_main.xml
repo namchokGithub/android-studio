@@ -12,17 +12,16 @@
         android:id="@+id/contentFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
-
-        <FrameLayout
-            android:id="@+id/inputLogin"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:duplicateParentState="true"
-            >
-
-        </FrameLayout>
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
     </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/inputLogin"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:duplicateParentState="true"
+        app:layout_constraintBottom_toBottomOf="@+id/contentFrame"></FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
