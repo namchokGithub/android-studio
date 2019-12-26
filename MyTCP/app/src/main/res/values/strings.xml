@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyTCP</string>
+    <string name="lblText">GO HOME NOW!!</string>
+    <string name="lblHost">10.80.82.247</string>
+    <string name="lblPort">2222</string>
+    <string name="lblSend">Send...</string>
+    <string name="lblName">NAME</string>
+    <string name="lblPass">PASS</string>
+    <string name="lblTextACK">xxx</string>
+</resources>

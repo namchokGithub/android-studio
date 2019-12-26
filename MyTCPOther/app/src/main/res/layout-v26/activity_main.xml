@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/editText2"
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:gravity="center"
+        android:text="@string/lblHost"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/editText3"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:gravity="center"
+        android:text="@string/lblPort"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/txtUserName"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:gravity="center"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:labelFor="@id/txtUserName"
+        android:text="@string/lblName"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/txtUserPass"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="text"
+        android:labelFor="@id/txtUserPass"
+        android:text="@string/lblPass"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#ff0000"
+        android:textColor="#FFFFFF"
+        android:text="@string/lblSend"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="@string/wait"
+        android:gravity="center"
+        android:textColor="#03fc03"
+        android:textSize="50sp" />
+
+</LinearLayout>
