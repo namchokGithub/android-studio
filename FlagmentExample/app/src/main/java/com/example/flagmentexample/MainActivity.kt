@@ -16,5 +16,8 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.contentContainer, fragment_first, "flagment_first")
         transaction.addToBackStack("flagment_first")
         transaction.commit()
+
+        val fragment_fourth = fourth()
+        supportFragmentManager.beginTransaction().replace(R.id.contentContainerBelow, fragment_fourth, "fragment_fourth").addToBackStack("fragment_fourth").commit()
     }
 }
