@@ -22,4 +22,19 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.inputLogin, fmInput, "Input login").addToBackStack("Input login").commit()
 
     }
+
+    override fun onBackPressed() {
+
+        val manager = supportFragmentManager.findFragmentById(R.id.contentFrame)
+
+        if (manager is login ) {
+
+            finish()
+
+        }
+        else{
+            super.onBackPressed();
+        }
+
+    }
 }
