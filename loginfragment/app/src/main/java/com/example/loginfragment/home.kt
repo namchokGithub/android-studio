@@ -1,24 +1,57 @@
 package com.example.loginfragment
 
 
+import android.graphics.Typeface
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import kotlinx.android.synthetic.main.fragment_home.*
 
 /**
  * A simple [Fragment] subclass.
  */
 class home : Fragment() {
+    private lateinit var usernameData: String
+    private lateinit var passwordData: String
+    private lateinit var textHi: TextView
+    private lateinit var textPassword: TextView
+    private lateinit var textUsername: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
+
+        textHi = view.findViewById(R.id.hi)
+        textPassword = view.findViewById(R.id.textPassword)
+        textUsername = view.findViewById(R.id.textUsername)
+
+        val bundle = arguments
+        if (bundle != null) {
+            usernameData = bundle.getString("username").toString()
+            passwordData = bundle.getString("password").toString()
+            loadData()
+        }
+
+        return view
     }
 
+    private fun loadData(){
+        this.textPassword.text = passwordData
+        this.textUsername.text = usernameData
+    }
 
+    fun sendData(username: String, password: String): home {
+        val fragment = home()
+        val bundle = Bundle()
+        bundle.putString("username", username)
+        bundle.putString("password", password)
+        fragment.setArguments(bundle)
+
+        return fragment
+    }
 }
