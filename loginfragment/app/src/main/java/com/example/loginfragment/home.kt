@@ -27,14 +27,18 @@ class home : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
         textHi = view.findViewById(R.id.hi)
-        textPassword = view.findViewById(R.id.textPassword)
-        textUsername = view.findViewById(R.id.textUsername)
+        this.textPassword = view.findViewById(R.id.textPassword)
+        this.textUsername = view.findViewById(R.id.textUsername)
 
         val bundle = arguments
         if (bundle != null) {
-            usernameData = bundle.getString("username").toString()
-            passwordData = bundle.getString("password").toString()
-            loadData()
+            usernameData = bundle.getString("usernameK").toString()
+            passwordData = bundle.getString("passwordK").toString()
+            this.textPassword.text = passwordData
+            this.textUsername.text = usernameData
+        }else {
+            this.textPassword.text = "Testuser"
+            this.textUsername.text = "Testpass"
         }
 
         return view
@@ -48,8 +52,8 @@ class home : Fragment() {
     fun sendData(username: String, password: String): home {
         val fragment = home()
         val bundle = Bundle()
-        bundle.putString("username", username)
-        bundle.putString("password", password)
+        bundle.putString("usernameK", username)
+        bundle.putString("passwordK", password)
         fragment.setArguments(bundle)
 
         return fragment

@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="470dp"
         android:layout_marginStart="60dp"
-        android:src="@drawable/planet" />
+        android:src="@drawable/planet"
+        android:contentDescription="@string/todo" />
 
 </FrameLayout>
