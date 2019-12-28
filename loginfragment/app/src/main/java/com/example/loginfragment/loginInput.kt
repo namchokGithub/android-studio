@@ -32,13 +32,19 @@ class loginInput : Fragment() {
 
         val btn_login = view.findViewById<Button>(R.id.btnLogin)
         btn_login!!.setOnClickListener{
-            loadPageHome()
+            this.loadPageHome()
         }
 
         return view
     }
 
-    fun loadPageHome(){
+    /*
+     * Name: loadPageHome
+     * Description: load home fragment to show username and password
+     * Input: None
+     * Output: None
+     * */
+    private fun loadPageHome(){
         val fmHome = home().sendData(inputUsername.text.toString(), inputPassword.text.toString())
         val empty = BlankFragment()
 
@@ -49,6 +55,5 @@ class loginInput : Fragment() {
         mg2!!.beginTransaction().replace(R.id.inputLogin, empty, "empty").commit()
 
     }
-
 
 }

@@ -26,29 +26,40 @@ class home : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        textHi = view.findViewById(R.id.hi)
+        // find view ID from TextView in fragment_home
         this.textPassword = view.findViewById(R.id.textPassword)
         this.textUsername = view.findViewById(R.id.textUsername)
 
-        val bundle = arguments
-        if (bundle != null) {
+        val bundle = arguments;
+        if (bundle != null) {              // If arguments have some data
             usernameData = bundle.getString("usernameK").toString()
             passwordData = bundle.getString("passwordK").toString()
-            this.textPassword.text = passwordData
-            this.textUsername.text = usernameData
-        }else {
-            this.textPassword.text = "Testuser"
-            this.textUsername.text = "Testpass"
+            loadData()                     // Load data to TextView
+        }else {                            // Else no data from arguments
+            this.textPassword.text = "Test user"
+            this.textUsername.text = "Test pass"
         }
 
         return view
     }
 
+    /*
+     * Name : loadData
+     * Description : Set data from to TextView
+     * Input : None
+     * Output : None
+     * */
     private fun loadData(){
         this.textPassword.text = passwordData
         this.textUsername.text = usernameData
     }
 
+    /*
+     * Name : sendData
+     * Description : Send data from some to fragment to another fragment
+     * Input : Username and Password
+     * Output : this fragment
+     * */
     fun sendData(username: String, password: String): home {
         val fragment = home()
         val bundle = Bundle()
