@@ -8,12 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
-import kotlinx.android.synthetic.main.fragment_login_input.*
 
-/**
- * A simple [Fragment] subclass.
- */
 class loginInput : Fragment() {
 
     private lateinit var inputUsername: EditText
