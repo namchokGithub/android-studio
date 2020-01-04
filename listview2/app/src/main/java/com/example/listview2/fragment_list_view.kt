@@ -1,4 +1,4 @@
-package com.example.listview
+package com.example.listview2
 
 
 import android.content.Context
@@ -7,28 +7,28 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import layout.CustomAdapter
+import android.widget.ListView
 import org.json.JSONObject
 
 /**
  * A simple [Fragment] subclass.
  */
-class ListView : Fragment() {
+class fragment_list_view : Fragment() {
+
     private lateinit var listView: ListView
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?
-    ): View? {
-
-        val view = inflater.inflate(R.layout.fragment_list_view, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
+        // Inflate the layout for this fragment
+        val view = inflater.inflate(R.layout.fragment_fragment_list_view, container, false)
 
         listView = view.findViewById(R.id.listview)
 
-        val jsonString : String  = loadJsonFromAsset("recipes.json", activity!!.baseContext).toString()
+        val jsonString : String = loadJsonFromAsset("recipes.json", activity!!.baseContext).toString()
         val json = JSONObject(jsonString)
         val jsonArray = json.getJSONArray("recipes")
 
-        val adapter = CustomAdapter(activity!!.baseContext,  jsonArray)
+        val adapter = CustomAdapter(activity!!.baseContext, jsonArray)
+        listView.adapter = adapter
 
         return view
     }
@@ -50,7 +50,6 @@ class ListView : Fragment() {
 
         return json
     }
-
 
 
 }
