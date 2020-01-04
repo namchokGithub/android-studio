@@ -54,10 +54,10 @@ class CustomAdapter(context: Context, val dataSource: JSONArray) : BaseAdapter()
             holder.detailTextView = view.findViewById(R.id.tv_description) as TextView
             holder.image = view.findViewById(R.id.imgV) as ImageView
 
-
             // 4
             view.tag = holder
         } else {
+
             // 5
             view = convertView
             holder = convertView.tag as ViewHolder
@@ -71,8 +71,8 @@ class CustomAdapter(context: Context, val dataSource: JSONArray) : BaseAdapter()
         val image = holder.image
 
 
-        titleTextView.setText( dataSource.getJSONObject(position).getString("title").toString() )
-        detailTextView.setText( dataSource.getJSONObject(position).getString("description").toString() )
+        titleTextView.text = dataSource.getJSONObject(position).getString("title").toString()
+        detailTextView.text = dataSource.getJSONObject(position).getString("description").toString()
 
         Glide.with(thiscontext)
             .load(dataSource.getJSONObject(position).getString("image").toString())
@@ -83,8 +83,6 @@ class CustomAdapter(context: Context, val dataSource: JSONArray) : BaseAdapter()
             Toast.makeText(thiscontext,titleTextView.text.toString(), Toast.LENGTH_SHORT).show()
 
         }
-
-
 
         return view
     }

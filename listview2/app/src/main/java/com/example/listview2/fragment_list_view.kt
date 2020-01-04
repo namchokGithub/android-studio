@@ -51,5 +51,4 @@ class fragment_list_view : Fragment() {
         return json
     }
 
-
 }
