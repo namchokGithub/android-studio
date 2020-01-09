@@ -7,7 +7,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ListView
+import android.widget.Toast
+import androidx.fragment.app.FragmentTransaction
 import org.json.JSONObject
 
 /**
@@ -29,6 +32,25 @@ class fragment_list_view : Fragment() {
 
         val adapter = CustomAdapter(activity!!.baseContext, jsonArray)
         listView.adapter = adapter
+
+
+        listView.setOnItemClickListener() { parent: AdapterView<*>, view:View, position:Int, id:Long ->
+            val content  = parent.getItemAtPosition(position).toString()
+            val obj = JSONObject(content)
+
+            val image:String = obj.get("image").toString()
+            val title:String = obj.get("title").toString()
+            val description:String = obj.get("description").toString()
+
+            Toast.makeText(context,"Select "+ title,Toast.LENGTH_LONG).show()
+
+            val detail = new_year().setData(title,description,image)
+            val fm = fragmentManager
+            val transaction : FragmentTransaction = fm!!.beginTransaction()
+            transaction.replace(R.id.Layout,detail,"detail")
+            transaction.addToBackStack("detail")
+            transaction.commit()
+        }
 
         return view
     }

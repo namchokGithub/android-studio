@@ -48,7 +48,6 @@ class loginInput : Fragment() {
 
         val mg2 = fragmentManager
         mg2!!.beginTransaction().replace(R.id.inputLogin, empty, "empty").commit()
-
     }
 
 }

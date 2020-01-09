@@ -1,5 +1,9 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.listview2
 
+import android.app.Fragment
+import android.app.FragmentManager
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -8,16 +12,14 @@ import android.widget.*
 import com.bumptech.glide.Glide
 import org.json.JSONArray
 
+
 private class ViewHolder {
 
     lateinit var layout : LinearLayout
     lateinit var titleTextView: TextView
     lateinit var detailTextView: TextView
     lateinit var image: ImageView
-
-
 }
-
 
 class CustomAdapter(context: Context, val dataSource: JSONArray) : BaseAdapter() {
 
@@ -60,12 +62,11 @@ class CustomAdapter(context: Context, val dataSource: JSONArray) : BaseAdapter()
 
             // 5
             view = convertView
-            holder = convertView.tag as ViewHolder
+            holder = convertView.tag as  ViewHolder
         }
 
         // 6
         val layout = holder.layout
-
         val titleTextView = holder.titleTextView
         val detailTextView = holder.detailTextView
         val image = holder.image
@@ -76,16 +77,9 @@ class CustomAdapter(context: Context, val dataSource: JSONArray) : BaseAdapter()
 
         Glide.with(thiscontext)
             .load(dataSource.getJSONObject(position).getString("image").toString())
-            .into(image);
-
-        layout.setOnClickListener{
-
-            Toast.makeText(thiscontext,titleTextView.text.toString(), Toast.LENGTH_SHORT).show()
-
-        }
+            .into(image)
 
         return view
     }
-
 
 }
