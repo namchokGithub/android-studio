@@ -44,8 +44,8 @@ class new_year : Fragment() {
             val url = this.textURLimg
 
             Glide.with(activity!!.baseContext)
-                .load(url)
-                .into(this.img)
+                  .load(url)
+                  .into(this.img)
         }
 
         return view
@@ -56,6 +56,7 @@ class new_year : Fragment() {
         val bundle = Bundle()
         bundle.putString("title", title)
         bundle.putString("detail", detail)
+        bundle.putString("image", image)
         fragment.arguments = bundle
 
         return fragment

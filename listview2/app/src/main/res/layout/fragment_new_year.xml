@@ -16,16 +16,16 @@
             android:id="@+id/textTitle"
             android:layout_width="300dp"
             android:layout_height="150dp"
+            android:layout_marginStart="20dp"
             android:text="@string/title"
             android:textSize="36sp"
             android:textStyle="bold"
-            android:layout_marginStart="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintHorizontal_bias="0.384"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.335" />
+            app:layout_constraintVertical_bias="0.592" />
 
         <TextView
             android:id="@+id/textDetail"
@@ -35,21 +35,20 @@
             android:text="@string/detail"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintHorizontal_bias="0.384"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTitle"
-            app:layout_constraintVertical_bias="0.166" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_width="225dp"
+            android:layout_height="234dp"
+            android:layout_marginTop="50dp"
             android:contentDescription="@string/todo"
             android:src="@drawable/planet"
             app:layout_constraintBottom_toTopOf="@+id/textTitle"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />

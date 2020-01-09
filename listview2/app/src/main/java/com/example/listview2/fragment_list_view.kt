@@ -42,7 +42,7 @@ class fragment_list_view : Fragment() {
             val title:String = obj.get("title").toString()
             val description:String = obj.get("description").toString()
 
-            Toast.makeText(context,"Select "+ title,Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Select $title",Toast.LENGTH_SHORT).show()
 
             val detail = new_year().setData(title,description,image)
             val fm = fragmentManager
