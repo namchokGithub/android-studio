@@ -34,7 +34,7 @@ class fragment_list_view : Fragment() {
         listView.adapter = adapter
 
 
-        listView.setOnItemClickListener() { parent: AdapterView<*>, view:View, position:Int, id:Long ->
+        listView.setOnItemClickListener { parent: AdapterView<*>, view:View, position:Int, id:Long ->
             val content  = parent.getItemAtPosition(position).toString()
             val obj = JSONObject(content)
 
