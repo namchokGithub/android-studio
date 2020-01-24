@@ -62,21 +62,18 @@ class MyRecyclerAdapter(fragment: FragmentActivity, val dataSource: JSONArray) :
         holder.facebookURL = dataSource.getJSONObject(position).getString("facebookURL").toString()
         holder.imageURL = dataSource.getJSONObject(position).getString("imageURL").toString()
 
-
-
         Glide.with(thiscontext)
             .load(dataSource.getJSONObject(position).getString("imageURL").toString())
             .into(holder.image)
 
         holder.layout.setOnClickListener{
 
-            val arrString = arrayOf(holder.titleTextView.text,  holder.detailTextView.text, holder.position, holder.imageURL, holder.facebookURL) as Array
-//            Toast.makeText(thiscontext,holder.titleTextView.text.toString(),Toast.LENGTH_SHORT).show()
-
-            val MemberDetail = memberDetail().newIntent(arrString)
+            val MemberDetail = memberDetail().newIntent(holder.titleTextView.text.toString(), holder.detailTextView.text.toString(), holder.imageURL, holder.facebookURL, holder.position)
             val fm = thisFragment.supportFragmentManager
-            val transaction : FragmentTransaction =  fm.beginTransaction()
-            transaction.replace(R.id.main_layout, MemberDetail,"fragment_MemberDetail").addToBackStack("fragment_MemberDetail").commit()
+            val transaction =  fm.beginTransaction()
+            transaction.replace(R.id.main_layout, MemberDetail,"fragment_MemberDetail")
+            transaction.addToBackStack("fragment_MemberDetail")
+            transaction.commit()
 
         }
 

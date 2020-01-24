@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.bumptech.glide.Glide
 
 
@@ -23,6 +24,7 @@ class memberDetail : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_member_detail, container, false)
+
         val textViewName = view.findViewById(R.id.textName) as TextView
         val textViewDes = view.findViewById(R.id.textDes) as TextView
         val textViewPos = view.findViewById(R.id.textPos) as TextView
@@ -44,6 +46,9 @@ class memberDetail : Fragment() {
                 .load(image)
                 .into(imageV)
 
+            Toast.makeText(activity, name,Toast.LENGTH_SHORT).show()
+        }else {
+            Toast.makeText(activity, "No data",Toast.LENGTH_SHORT).show()
         }
 
         return  view
@@ -55,15 +60,9 @@ class memberDetail : Fragment() {
      * Input : None
      * Output : this fragment
      * */
-    fun newIntent(arr: Array<CharSequence>): home {
-        val fragment = home()
+    fun newIntent(name: String, des: String, img: String, face: String, pos: String): memberDetail {
+        val fragment = memberDetail()
         val bundle = Bundle()
-
-        val name: String = arr[0] as String
-        val des: String = arr[1] as String
-        val img: String = arr[2] as String
-        val face: String = arr[3] as String
-        val pos: String = arr[4] as String
 
         bundle.putString("name", name)
         bundle.putString("des", des )

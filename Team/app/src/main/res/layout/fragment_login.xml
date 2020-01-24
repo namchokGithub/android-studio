@@ -19,7 +19,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imgLogin"
-            app:layout_constraintVertical_bias="0.207" />
+            app:layout_constraintVertical_bias="0.114" />
 
         <EditText
             android:id="@+id/PasswordInput"
@@ -34,9 +34,9 @@
 
         <ImageView
             android:id="@+id/imgLogin"
-            android:layout_width="201dp"
-            android:layout_height="148dp"
-            android:src="@mipmap/ic_launcher_round"
+            android:layout_width="340dp"
+            android:layout_height="286dp"
+            android:src="@drawable/logo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -45,15 +45,19 @@
 
         <Button
             android:id="@+id/btnLogin"
-            android:layout_width="215dp"
-            android:layout_height="42dp"
+            android:layout_width="208dp"
+            android:layout_height="66dp"
             android:layout_marginTop="48dp"
             android:text="@string/login"
+            android:background="#FFA078"
+            android:textColor="#ffff"
+            android:textSize="30sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/PasswordInput"
-            app:layout_constraintVertical_bias="0.005" />
+            app:layout_constraintVertical_bias="0.008" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

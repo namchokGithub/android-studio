@@ -14,14 +14,14 @@ import android.widget.Toast
  */
 class home : Fragment() {
 
-    lateinit var team1 : ImageView
-    lateinit var team2 : ImageView
-    lateinit var team3 : ImageView
-    lateinit var team4 : ImageView
-    lateinit var team5 : ImageView
-    lateinit var team6 : ImageView
-    lateinit var team7 : ImageView
-    lateinit var team8 : ImageView
+    private lateinit var team1 : ImageView
+    private lateinit var team2 : ImageView
+    private lateinit var team3 : ImageView
+    private lateinit var team4 : ImageView
+    private lateinit var team5 : ImageView
+    private lateinit var team6 : ImageView
+    private lateinit var team7 : ImageView
+    private lateinit var team8 : ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,53 +39,58 @@ class home : Fragment() {
         team8 = view.findViewById(R.id.imgTeam8)
 
         team1.setOnClickListener{
-            Toast.makeText(activity, "Team 1.", Toast.LENGTH_SHORT).show()
-
+            Toast.makeText(activity, "Team 1", Toast.LENGTH_SHORT).show()
             val mg = fragmentManager
             val member = member().setTeam("team1")
-
-            mg!!.beginTransaction().replace(R.id.main_layout, member, "Fragemnt_member").addToBackStack("Fragemnt_member").commit()
-
-
+            mg!!.beginTransaction().replace(R.id.main_layout, member, "Fragment_member").addToBackStack("Fragment_member").commit()
         }
         team2.setOnClickListener{
-            Toast.makeText(activity, "Hi there! This is a Toast 2.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Team 2", Toast.LENGTH_SHORT).show()
+            val mg = fragmentManager
+            val member = member().setTeam("team2")
+            mg!!.beginTransaction().replace(R.id.main_layout, member, "Fragment_member").addToBackStack("Fragment_member").commit()
         }
         team3.setOnClickListener{
-            Toast.makeText(activity, "Hi there! This is a Toast 3.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Team 3", Toast.LENGTH_SHORT).show()
+            val mg = fragmentManager
+            val member = member().setTeam("team3")
+            mg!!.beginTransaction().replace(R.id.main_layout, member, "Fragment_member").addToBackStack("Fragment_member").commit()
         }
         team4.setOnClickListener{
-            Toast.makeText(activity, "Hi there! This is a Toast 4.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Team 4", Toast.LENGTH_SHORT).show()
+            val mg = fragmentManager
+            val member = member().setTeam("team4")
+            mg!!.beginTransaction().replace(R.id.main_layout, member, "Fragment_member").addToBackStack("Fragment_member").commit()
         }
         team5.setOnClickListener{
-            Toast.makeText(activity, "Hi there! This is a Toast 5.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Team 5", Toast.LENGTH_SHORT).show()
+            val mg = fragmentManager
+            val member = member().setTeam("team5")
+            mg!!.beginTransaction().replace(R.id.main_layout, member, "Fragment_member").addToBackStack("Fragment_member").commit()
         }
         team6.setOnClickListener{
-            Toast.makeText(activity, "Hi there! This is a Toast 6.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Team 6", Toast.LENGTH_SHORT).show()
+            val mg = fragmentManager
+            val member = member().setTeam("team6")
+            mg!!.beginTransaction().replace(R.id.main_layout, member, "Fragment_member").addToBackStack("Fragment_member").commit()
         }
         team7.setOnClickListener{
-            Toast.makeText(activity, "Hi there! This is a Toast 7.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Team 7", Toast.LENGTH_SHORT).show()
+            val mg = fragmentManager
+            val member = member().setTeam("team7")
+            mg!!.beginTransaction().replace(R.id.main_layout, member, "Fragment_member").addToBackStack("Fragment_member").commit()
         }
         team8.setOnClickListener{
-            Toast.makeText(activity, "Hi there! This is a Toast 8.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Team 85", Toast.LENGTH_SHORT).show()
+            val mg = fragmentManager
+            val member = member().setTeam("team8")
+            mg!!.beginTransaction().replace(R.id.main_layout, member, "Fragment_member").addToBackStack("Fragment_member").commit()
         }
 
         return view
     }
 
-    /*
-     * Name : newIntent
-     * Description : Send data from some to fragment to another fragment
-     * Input : None
-     * Output : this fragment
-     * */
-    fun newIntent(): home {
-        val fragment = home()
-        val bundle = Bundle()
-        fragment.setArguments(bundle)
 
-        return fragment
-    }
 
 
 }
