@@ -12,9 +12,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import org.json.JSONArray
 
-class MyRecyclerAdapter(context: Context, val dataSource: JSONArray) : RecyclerView.Adapter<MyRecyclerAdapter.Holder>() {
+class MyRecyclerAdapter(context: Context, val dataSource: JSONArray, teamNo: String) : RecyclerView.Adapter<MyRecyclerAdapter.Holder>() {
 
     private val thiscontext : Context = context
+    private val teamNo : String = teamNo
 
     class Holder(view : View) : RecyclerView.ViewHolder(view) {
 

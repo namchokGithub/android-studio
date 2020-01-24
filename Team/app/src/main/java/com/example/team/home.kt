@@ -42,7 +42,7 @@ class home : Fragment() {
             Toast.makeText(activity, "Hi there! This is a Toast 1.", Toast.LENGTH_SHORT).show()
 
             val mg = fragmentManager
-            val member = member()
+            val member = member().setTeam("1")
 
             mg!!.beginTransaction().replace(R.id.main_layout, member, "Fragemnt_member").addToBackStack("Fragemnt_member").commit()
 

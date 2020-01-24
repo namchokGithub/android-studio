@@ -16,6 +16,8 @@ import org.json.JSONObject
  */
 class member : Fragment() {
 
+    lateinit var teamNo: String
+
     override fun onCreateView(inflater : LayoutInflater
                               ,container: ViewGroup?
                               ,savedInstanceState: Bundle?
@@ -23,21 +25,37 @@ class member : Fragment() {
         val view = inflater.inflate(R.layout.fragment_member, container, false)
         // Inflate the layout for this fragment
 
+        val bundle = arguments;
+        if (bundle != null) {              // If arguments have some data
+            teamNo = bundle.getString("key_Number").toString()
+        }
+
+
         val jsonString : String = loadJsonFromAsset("member.json", activity!!.baseContext).toString()
         val json = JSONObject(jsonString)
         val jsonArray = json.getJSONArray("recipes")
 
-        val recyclerView: RecyclerView = view.findViewById(R.id.recyview_LayputMember)
+        val recyclerView: RecyclerView = view.findViewById(R.id.recyLayoutMember)
 
         //ตั้งค่า Layout
         val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(activity!!.baseContext)
         recyclerView.layoutManager = layoutManager
 
         //ตั้งค่า Adapter
-        val adapter = MyRecyclerAdapter(activity!!.baseContext,jsonArray)
+        val adapter = MyRecyclerAdapter(activity!!.baseContext,jsonArray, teamNo)
         recyclerView.adapter = adapter
 
         return view
+    }
+
+    fun setTeam(number: String): member {
+        val fragment = member()
+        val bundle = Bundle()
+
+        bundle.putString("key_Number", number)
+        fragment.setArguments(bundle)
+
+        return fragment
     }
 
     private fun loadJsonFromAsset(filename: String, context: Context): String? {
