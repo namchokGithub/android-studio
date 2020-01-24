@@ -29,8 +29,10 @@ class MainActivity : AppCompatActivity() {
 
         val contentFragment = supportFragmentManager.findFragmentById(R.id.main_layout)
 
-        if (contentFragment is login ) {   // this contentFrame is login fragment
+        if (contentFragment is home ) {   // this contentFrame is login fragment
             finish()
+        }else {
+            super.onBackPressed()
         }
 
     }

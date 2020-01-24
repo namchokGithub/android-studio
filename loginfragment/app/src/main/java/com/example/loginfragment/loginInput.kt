@@ -50,19 +50,4 @@ class loginInput : Fragment() {
         mg2!!.beginTransaction().replace(R.id.inputLogin, empty, "empty").commit()
     }
 
-    /*
- * Name : sendData
- * Description : Send data from some to fragment to another fragment
- * Input : Username and Password
- * Output : this fragment
- * */
-    fun sendData(username: String, password: String): home {
-        val fragment = home()
-        val bundle = Bundle()
-        bundle.putString("usernameK", username)
-        bundle.putString("passwordK", password)
-        fragment.setArguments(bundle)
-
-        return fragment
-    }
 }

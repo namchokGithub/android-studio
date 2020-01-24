@@ -30,7 +30,6 @@ class member : Fragment() {
             teamNo = bundle.getString("key_Number").toString()
         }
 
-
         val jsonString : String = loadJsonFromAsset("member.json", activity!!.baseContext).toString()
         val json = JSONObject(jsonString)
         val jsonArray = json.getJSONArray(teamNo)
