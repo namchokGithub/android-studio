@@ -12,10 +12,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import org.json.JSONArray
 
-class MyRecyclerAdapter(context: Context, val dataSource: JSONArray, teamNo: String) : RecyclerView.Adapter<MyRecyclerAdapter.Holder>() {
+class MyRecyclerAdapter(context: Context, val dataSource: JSONArray) : RecyclerView.Adapter<MyRecyclerAdapter.Holder>() {
 
     private val thiscontext : Context = context
-    private val teamNo : String = teamNo
 
     class Holder(view : View) : RecyclerView.ViewHolder(view) {
 
@@ -51,11 +50,13 @@ class MyRecyclerAdapter(context: Context, val dataSource: JSONArray, teamNo: Str
 
         holder.Holder()
 
-        holder.titleTextView.setText( dataSource.getJSONObject(position).getString("title").toString() )
-        holder.detailTextView.setText( dataSource.getJSONObject(position).getString("description").toString() )
+        holder.titleTextView.text = dataSource.getJSONObject(position).getString("Name").toString()
+        holder.detailTextView.text = dataSource.getJSONObject(position).getString("Position").toString()
+
+
 
         Glide.with(thiscontext)
-            .load(dataSource.getJSONObject(position).getString("image").toString())
+            .load(dataSource.getJSONObject(position).getString("imageURL").toString())
             .into(holder.image)
 
         holder.layout.setOnClickListener{
