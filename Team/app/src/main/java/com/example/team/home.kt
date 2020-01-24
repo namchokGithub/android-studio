@@ -39,7 +39,7 @@ class home : Fragment() {
         team8 = view.findViewById(R.id.imgTeam8)
 
         team1.setOnClickListener{
-            Toast.makeText(activity, "Hi there! This is a Toast 1.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Team 1.", Toast.LENGTH_SHORT).show()
 
             val mg = fragmentManager
             val member = member().setTeam("team1")

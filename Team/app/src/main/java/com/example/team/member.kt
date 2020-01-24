@@ -41,7 +41,7 @@ class member : Fragment() {
         recyclerView.layoutManager = layoutManager
 
         //ตั้งค่า Adapter
-        val adapter = MyRecyclerAdapter(activity!!.baseContext,jsonArray)
+        val adapter = MyRecyclerAdapter(activity!!, jsonArray)
         recyclerView.adapter = adapter
 
         return view

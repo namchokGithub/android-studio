@@ -8,13 +8,16 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import org.json.JSONArray
 
-class MyRecyclerAdapter(context: Context, val dataSource: JSONArray) : RecyclerView.Adapter<MyRecyclerAdapter.Holder>() {
+class MyRecyclerAdapter(fragment: FragmentActivity, val dataSource: JSONArray) : RecyclerView.Adapter<MyRecyclerAdapter.Holder>() {
 
-    private val thiscontext : Context = context
+    private val thiscontext : Context = fragment.baseContext
+    private val thisFragment = fragment
 
     class Holder(view : View) : RecyclerView.ViewHolder(view) {
 
@@ -24,6 +27,9 @@ class MyRecyclerAdapter(context: Context, val dataSource: JSONArray) : RecyclerV
         lateinit var titleTextView: TextView
         lateinit var detailTextView: TextView
         lateinit var image: ImageView
+        lateinit var imageURL: String
+        lateinit var position: String
+        lateinit var facebookURL: String
 
         fun Holder(){
 
@@ -51,7 +57,10 @@ class MyRecyclerAdapter(context: Context, val dataSource: JSONArray) : RecyclerV
         holder.Holder()
 
         holder.titleTextView.text = dataSource.getJSONObject(position).getString("Name").toString()
-        holder.detailTextView.text = dataSource.getJSONObject(position).getString("Position").toString()
+        holder.detailTextView.text = dataSource.getJSONObject(position).getString("Description").toString()
+        holder.position = dataSource.getJSONObject(position).getString("Position").toString()
+        holder.facebookURL = dataSource.getJSONObject(position).getString("facebookURL").toString()
+        holder.imageURL = dataSource.getJSONObject(position).getString("imageURL").toString()
 
 
 
@@ -61,7 +70,13 @@ class MyRecyclerAdapter(context: Context, val dataSource: JSONArray) : RecyclerV
 
         holder.layout.setOnClickListener{
 
-            Toast.makeText(thiscontext,holder.titleTextView.text.toString(),Toast.LENGTH_SHORT).show()
+            val arrString = arrayOf(holder.titleTextView.text,  holder.detailTextView.text, holder.position, holder.imageURL, holder.facebookURL) as Array
+//            Toast.makeText(thiscontext,holder.titleTextView.text.toString(),Toast.LENGTH_SHORT).show()
+
+            val MemberDetail = memberDetail().newIntent(arrString)
+            val fm = thisFragment.supportFragmentManager
+            val transaction : FragmentTransaction =  fm.beginTransaction()
+            transaction.replace(R.id.main_layout, MemberDetail,"fragment_MemberDetail").addToBackStack("fragment_MemberDetail").commit()
 
         }
 
