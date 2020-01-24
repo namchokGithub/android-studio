@@ -40,6 +40,13 @@ class home : Fragment() {
 
         team1.setOnClickListener{
             Toast.makeText(activity, "Hi there! This is a Toast 1.", Toast.LENGTH_SHORT).show()
+
+            val mg = fragmentManager
+            val member = member()
+
+            mg!!.beginTransaction().replace(R.id.main_layout, member, "Fragemnt_member").addToBackStack("Fragemnt_member").commit()
+
+
         }
         team2.setOnClickListener{
             Toast.makeText(activity, "Hi there! This is a Toast 2.", Toast.LENGTH_SHORT).show()
