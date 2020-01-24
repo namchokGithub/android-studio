@@ -18,4 +18,20 @@ class MainActivity : AppCompatActivity() {
         val fmLogin = login()
         supportFragmentManager.beginTransaction().replace(R.id.main_layout, fmLogin, "fmLogin").addToBackStack("fmLogin").commit()
     }
+
+    /*
+     * Name: override onBackPressed
+     * Description: When back press
+     * Input: None
+     * Output: None
+     * */
+    override fun onBackPressed() {
+
+        val contentFragment = supportFragmentManager.findFragmentById(R.id.main_layout)
+
+        if (contentFragment is login ) {   // this contentFrame is login fragment
+            finish()
+        }
+
+    }
 }

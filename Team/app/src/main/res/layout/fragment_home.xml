@@ -20,7 +20,8 @@
             app:layout_constraintHorizontal_bias="0.153"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.113" />
+            app:layout_constraintVertical_bias="0.113"
+            android:contentDescription="@string/todo" />
 
         <ImageView
             android:id="@+id/imgTeam2"
@@ -32,7 +33,8 @@
             app:layout_constraintHorizontal_bias="0.802"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.113" />
+            app:layout_constraintVertical_bias="0.113"
+            android:contentDescription="@string/todo"/>
 
         <ImageView
             android:id="@+id/imgTeam3"
@@ -44,7 +46,8 @@
             app:layout_constraintHorizontal_bias="0.153"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.38" />
+            app:layout_constraintVertical_bias="0.38"
+            android:contentDescription="@string/todo"/>
 
         <ImageView
             android:id="@+id/imgTeam4"
@@ -56,7 +59,8 @@
             app:layout_constraintHorizontal_bias="0.802"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.38" />
+            app:layout_constraintVertical_bias="0.38"
+            android:contentDescription="@string/todo"/>
 
         <ImageView
             android:id="@+id/imgTeam5"
@@ -68,7 +72,8 @@
             app:layout_constraintHorizontal_bias="0.153"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.649" />
+            app:layout_constraintVertical_bias="0.649"
+            android:contentDescription="@string/todo"/>
 
         <ImageView
             android:id="@+id/imgTeam6"
@@ -80,7 +85,8 @@
             app:layout_constraintHorizontal_bias="0.802"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.649" />
+            app:layout_constraintVertical_bias="0.649"
+            android:contentDescription="@string/todo"/>
 
         <ImageView
             android:id="@+id/imgTeam7"
@@ -92,7 +98,8 @@
             app:layout_constraintHorizontal_bias="0.153"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.896" />
+            app:layout_constraintVertical_bias="0.896"
+            android:contentDescription="@string/todo"/>
 
         <ImageView
             android:id="@+id/imgTeam8"
@@ -104,7 +111,8 @@
             app:layout_constraintHorizontal_bias="0.802"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.896" />
+            app:layout_constraintVertical_bias="0.896"
+            android:contentDescription="@string/todo"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
