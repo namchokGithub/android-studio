@@ -20,5 +20,19 @@ class home : Fragment() {
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
+    /*
+     * Name : newIntent
+     * Description : Send data from some to fragment to another fragment
+     * Input : None
+     * Output : this fragment
+     * */
+    fun newIntent(): home {
+        val fragment = home()
+        val bundle = Bundle()
+        fragment.setArguments(bundle)
+
+        return fragment
+    }
+
 
 }
