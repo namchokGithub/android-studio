@@ -23,8 +23,7 @@ class MainActivity : AppCompatActivity() {
         // Load fragment input login
         val fmInput = loginInput()
         supportFragmentManager.beginTransaction().replace(R.id.inputLogin, fmInput, "Input login").commit()
-
-
+        
     }
 
     /*
