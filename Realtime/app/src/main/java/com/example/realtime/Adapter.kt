@@ -61,7 +61,7 @@ class Adapter (act : FragmentActivity, val dataSource: JSONArray) : BaseAdapter(
 
         view.setOnClickListener{
 
-            val Edit = Edit().newInstance(dataSource.getJSONObject(position).getString("key").toString(),dataSource.getJSONObject(position).getString("text").toString(),dataSource.getJSONObject(position).getString("username").toString())
+            val Edit = Edit().newInstance(dataSource.getJSONObject(position).getString("key").toString(),dataSource.getJSONObject(position).getString("username").toString(),dataSource.getJSONObject(position).getString("text").toString())
             val fm = activity.supportFragmentManager
             val transaction : FragmentTransaction = fm.beginTransaction()
             transaction.replace(R.id.edit, Edit,"fragment_Edit")
