@@ -181,6 +181,59 @@ class MainChart : Fragment() {
 
     }
 
+    fun Line_Chart(chart : LineChart) {
+
+        //ปิด Description
+        chart.description.isEnabled = false
+
+        //ข้อมูล 4 อัน
+        val entries: ArrayList<Entry> = ArrayList()
+        entries.add(Entry(0F, 4F))
+        entries.add(Entry(1F, 1F))
+        entries.add(Entry(2F, 2F))
+        entries.add(Entry(3F, 4F))
+
+        val dataSet = LineDataSet(entries, "Customized values")
+        dataSet.color = ContextCompat.getColor(activity!!.baseContext, R.color.colorPrimary)
+        dataSet.valueTextColor = ContextCompat.getColor(activity!!.baseContext, R.color.colorPrimaryDark)
+
+        // Controlling X axis
+        val xAxis = chart.xAxis
+        // Set the xAxis position to bottom. Default is top
+        xAxis.position = XAxis.XAxisPosition.BOTTOM
+
+        //เซ้ทเส้นที่แสดง
+        xAxis.granularity = 1f
+
+        //Customizing x axis value
+        val months = arrayOf("Jan", "Feb", "Mar", "Apr")
+
+        xAxis.setValueFormatter(object : ValueFormatter() {
+            override fun getFormattedValue(value: Float): String? {
+                return months[value.toInt()]
+            }
+        })
+
+        // Controlling right side of y axis
+        val yAxisRight = chart.axisRight
+        yAxisRight.isEnabled = false
+
+        // Controlling left side of y axis
+        val yAxisLeft = chart.axisLeft
+
+        //เซ้ทเส้นที่แสดง
+        yAxisLeft.granularity = 1f
+
+        // Setting Data
+        val data = LineData(dataSet)
+        chart.data = data
+        chart.animateX(2500)
+
+        //refresh
+        chart.invalidate()
+
+    }
+
 
 
 }
