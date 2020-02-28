@@ -1,3 +1,6 @@
+/*
+* Main activity
+* */
 package com.example.graph
 
 import androidx.appcompat.app.AppCompatActivity
