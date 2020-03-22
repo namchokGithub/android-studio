@@ -19,11 +19,12 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.main_layout, fmLogin, "fmLogin").addToBackStack("fmLogin").commit()
     }
 
-    /*
-     * Name: override onBackPressed
-     * Description: When back press
-     * Input: None
-     * Output: None
+    /**
+     * ? Name: override onBackPressed
+     * ! Description: When back press
+     * // Input: None
+     * * Output: None
+     * TODO Output: None
      * */
     override fun onBackPressed() {
 

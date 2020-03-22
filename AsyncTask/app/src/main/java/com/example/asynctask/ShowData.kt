@@ -1,11 +1,15 @@
 package com.example.asynctask
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 
 /**
  * A simple [Fragment] subclass.
@@ -32,6 +36,25 @@ class ShowData : Fragment() {
 
         textview = view.findViewById(R.id.text)
         textview.setText(result)
+
+        var button : Button
+
+        button = view.findViewById(R.id.test)
+
+        button.setOnClickListener {
+            val builder: AlertDialog.Builder = AlertDialog.Builder(this.context)
+            builder.setMessage("รับขนมจีบซาลาเปาเพิ่มมั้ยครับ?")
+            builder.setPositiveButton("รับ") { _, _ ->
+                Toast.makeText(
+                    this.context,
+                    "ขอบคุณครับ", Toast.LENGTH_SHORT
+                ).show()
+            }
+            builder.setNegativeButton("ไม่รับ") { _, _ ->
+                //dialog.dismiss();
+            }
+            builder.show()
+        }
 
         return view
     }
