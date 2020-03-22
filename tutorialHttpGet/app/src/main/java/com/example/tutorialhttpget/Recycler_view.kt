@@ -37,43 +37,20 @@ class Recycler_view : Fragment() {
         // Test show data form JSON file
         text.text = result
 
+        val json = JSONObject(result)
+        val jsonArray = json.getJSONArray("data")
 
+        val recyclerView: RecyclerView = view.findViewById(R.id.recyLayout)
 
-//        val jsonString : String = loadJsonFromAsset("recipes.json", activity!!.baseContext).toString()
-//        val json = JSONObject(jsonString)
-//        val jsonArray = json.getJSONArray("recipes")
-//
-//        val recyclerView: RecyclerView = view.findViewById(R.id.recyLayout)
-//
-//        // ตั้งค่า Layout
-//        val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(activity!!.baseContext)
-//        recyclerView.layoutManager = layoutManager
-//
-//        // ตั้งค่า Adapter
-//        val adapter = MyRecyclerAdapter(activity!!.baseContext,jsonArray)
-//        recyclerView.adapter = adapter
+        // ตั้งค่า Layout
+        val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(activity!!.baseContext)
+        recyclerView.layoutManager = layoutManager
+
+        // ตั้งค่า Adapter
+        val adapter = MyRecyclerAdapter(activity!!, activity!!.baseContext,jsonArray)
+        recyclerView.adapter = adapter
 
         return view
     }
-
-    private fun loadJsonFromAsset(filename: String, context: Context): String? {
-        val json: String?
-
-        try {
-            val inputStream = context.assets.open(filename)
-            val size = inputStream.available()
-            val buffer = ByteArray(size)
-            inputStream.read(buffer)
-            inputStream.close()
-            json = String(buffer, Charsets.UTF_8)
-        } catch (ex: java.io.IOException) {
-            ex.printStackTrace()
-            return null
-        }
-
-        return json
-    }
-
-
 
 }
